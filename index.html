@@ -48,15 +48,15 @@
             getHumanChoice();
         }
 
-        if(computerChoice === undefined){
+        else if(computerChoice === undefined){
             getComputerChoice();
         }
 
-        if (humanChoice && computerChoice != undefined){
+        else if (humanChoice && computerChoice != undefined){
             i++;
         }
 
-        if (i != 0){
+        else if (i != 0){
             if(humanChoice == computerChoice){
                 console.log("Tie!  Replay the round.");
                 playRound();
