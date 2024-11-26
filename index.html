@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script>
-        
+    
+    function getComputerChoice(){
+        let numChoice = Math.random();
+        if (numChoice <= 0.33)
+            return "Rock"
+        if (numChoice >= 0.67)
+            return "Paper"
+        else
+            return "scissors"
+    };
+
+
+
     </script>
 </head>
 <body>
