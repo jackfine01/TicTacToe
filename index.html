@@ -8,12 +8,13 @@
     
     function getComputerChoice(){
         let numChoice = Math.random();
+        let stringChoice = "Scissors"
         if (numChoice <= 0.33)
-            return "Rock"
+            stringChoice = "Rock"
         if (numChoice >= 0.67)
-            return "Paper"
+            stringChoice = "Paper"
         else
-            return "scissors"
+            stringChoice = "Scissors"
     };
 
 
