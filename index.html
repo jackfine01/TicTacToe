@@ -43,11 +43,10 @@
 
     function playRound(humanChoice, computerChoice){
 
-        if(humanChoice === undefined){
+        if(humanChoice == undefined){
             getHumanChoice();
-            playRound();
         }
-        else if(computerChoice === undefined){
+        else if(computerChoice == undefined){
             getComputerChoice();
             playRound();
         }
