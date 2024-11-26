@@ -62,31 +62,30 @@
                 playRound();
             }
             else if(humanChoice == "Rock" && computerChoice == "Scissors"){
-                console.log("You win! Rock beats Scissors.")
+                alert("You win! Rock beats Scissors.")
                 humanScore++;
             }
             else if(computerChoice == "Rock" && humanChoice == "Scissors"){
-                console.log("You lose! Rock beats Scissors.")
+                alert("You lose! Rock beats Scissors.")
                 computerScore++;
             }
             else if(humanChoice == "Paper" && computerChoice == "Scissors"){
-                console.log("You lose! Scissors beats Paper.")
+                alert("You lose! Scissors beats Paper.")
                 computerScore++;
             }
             else if(computerChoice == "Paper" && humanChoice == "Scissors"){
-                console.log("You win! Scissors beats Paper.")
+                alert("You win! Scissors beats Paper.")
                 humanScore++;
             }
             else if(computerChoice == "Paper" && humanChoice == "Rock"){
-                console.log("You Lose! Paper beats Rock.")
+                alert("You Lose! Paper beats Rock.")
                 computerScore++;
             }
             else
-                console.log("You win! Paper beats Rock.")
+                alert("You win! Paper beats Rock.")
                 humanScore++;
         }
-        return humanScore;
-        return computerScore;
+        alert("You have won " + humanScore + " rounds, the computer has won " + computerScore + " rounds.");
     };
     </script>
 </head>
