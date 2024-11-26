@@ -54,10 +54,7 @@
             playRound();
         }
 
-            if(humanChoice === computerChoice){
-                alert("Tie!  Replay the round.");
-                playRound();
-            }
+
             else if(humanChoice == "Rock" && computerChoice == "Scissors"){
                 alert("You win! Rock beats Scissors.")
                 humanScore++;
@@ -77,6 +74,10 @@
             else if(computerChoice == "Paper" && humanChoice == "Rock"){
                 alert("You Lose! Paper beats Rock.")
                 computerScore++;
+            }
+            else if(humanChoice === computerChoice){
+                alert("Tie!  Replay the round.");
+                playRound();
             }
             else
                 alert("You win! Paper beats Rock.")
