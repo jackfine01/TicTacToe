@@ -45,9 +45,13 @@
 
         if(humanChoice == undefined){
             getHumanChoice();
+            return humanChoice;
+            playRound();
         }
         else if(computerChoice == undefined){
             getComputerChoice();
+            return computerChoice;
+            playRound();
         }
 
             if(humanChoice === computerChoice){
