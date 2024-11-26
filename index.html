@@ -43,36 +43,41 @@
 
     function playRound(humanChoice, computerChoice){
 
-            if(humanChoice === computerChoice){
-                alert("Tie!  Replay the round.");
+            if(humanChoice == computerChoice){
+                console.log("Tie!  Replay the round.");
                 playRound();
             }
             else if(humanChoice == "Rock" && computerChoice == "Scissors"){
-                alert("You win! Rock beats Scissors.")
+                console.log("You win! Rock beats Scissors.")
                 humanScore++;
             }
             else if(computerChoice == "Rock" && humanChoice == "Scissors"){
-                alert("You lose! Rock beats Scissors.")
+                console.log("You lose! Rock beats Scissors.")
                 computerScore++;
             }
             else if(humanChoice == "Paper" && computerChoice == "Scissors"){
-                alert("You lose! Scissors beats Paper.")
+                console.log("You lose! Scissors beats Paper.")
                 computerScore++;
             }
             else if(computerChoice == "Paper" && humanChoice == "Scissors"){
-                alert("You win! Scissors beats Paper.")
+                console.log("You win! Scissors beats Paper.")
                 humanScore++;
             }
             else if(computerChoice == "Paper" && humanChoice == "Rock"){
-                alert("You Lose! Paper beats Rock.")
+                console.log("You Lose! Paper beats Rock.")
                 computerScore++;
             }
             else {
-                alert("You win! Paper beats Rock.")
+                console.log("You win! Paper beats Rock.")
                 humanScore++;
         }
-        alert("You have won " + humanScore + " rounds, the computer has won " + computerScore + " rounds.");
+        console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
     };
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(humanSelection,computerSelection);
     </script>
 </head>
 <body>
