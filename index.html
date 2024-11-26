@@ -70,7 +70,10 @@
             else if(computerChoice == "Rock" && humanChoice == "Paper") {
                 console.log("You win! Paper beats Rock.")
                 humanScore++;
-        }
+            }
+            else
+                consloe.log("Invalid, play again.")
+                playRound(humanSelection,computerSelection);
         console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
     };
 
