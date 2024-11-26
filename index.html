@@ -48,10 +48,9 @@
         }
         else if(computerChoice == undefined){
             getComputerChoice();
-            playRound();
         }
 
-            if(humanChoice == computerChoice){
+            if(humanChoice === computerChoice){
                 alert("Tie!  Replay the round.");
                 playRound();
             }
