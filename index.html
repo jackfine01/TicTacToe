@@ -13,7 +13,6 @@
             stringChoice = "Rock"
         else if (numChoice >= 0.67)
             stringChoice = "Paper"
-        return stringChoice
     };
     let computerChoice = stringChoice
 
@@ -26,17 +25,17 @@
             humanChoice = "Rock";
             i++;
             }
-        else if (choice.toLowerCase()=== "paper"){
+        else if (choice.toLowerCase() === "paper"){
             humanChoice = "Paper";
             i++;
         }
-        else if (choice.toLowerCase()=== "scissors"){
+        else if (choice.toLowerCase() === "scissors"){
             humanChoice = "Scissors";
             i++;
         }
         else
             getHumanChoice();
-        
+
         if(i>0)
             return humanChoice
     };
