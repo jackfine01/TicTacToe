@@ -11,10 +11,8 @@
         let stringChoice = "Scissors"
         if (numChoice <= 0.33)
             stringChoice = "Rock"
-        if (numChoice >= 0.67)
+        else if (numChoice >= 0.67)
             stringChoice = "Paper"
-        else
-            stringChoice = "Scissors"
         return stringChoice
     };
 
