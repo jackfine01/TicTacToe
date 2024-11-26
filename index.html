@@ -17,6 +17,23 @@
     };
     let computerChoice = stringChoice
 
+    let humanChoice = "Scissors"
+    function getHumanChoice(){
+
+        let choice = prompt("Rock, Paper, or Scissors?");
+        if (choice.toLowerCase() === "rock") {
+            humanChoice = "Rock";
+            }
+        else if (choice.toLowerCase()=== "paper"){
+            humanChoice = "Paper";
+        }
+        else if (choice.toLowerCase()=== "scissors"){
+            humanChoice = "Scissors";
+        }
+        else
+            choice = prompt("Rock, Paper, or Scissors?");
+        return humanChoice
+    };
 
     </script>
 </head>
