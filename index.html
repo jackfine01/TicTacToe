@@ -6,7 +6,7 @@
     <title>Rock Paper Scissors</title>
     <script>
 
-    let computerChoice = undefined;
+    let computerChoice = getComputerChoice();
     function getComputerChoice(){
         let numChoice = Math.random();
         if (numChoice <= 0.33)
@@ -18,7 +18,7 @@
         return computerChoice
     };
 
-    let humanChoice = undefined;
+    let humanChoice = getHumanChoice();
     function getHumanChoice(){
 
         let choice = prompt("Rock, Paper, or Scissors?");
@@ -43,17 +43,6 @@
 
     function playRound(humanChoice, computerChoice){
 
-        if(humanChoice == undefined){
-            getHumanChoice();
-            return humanChoice;
-            playRound();
-        }
-        else if(computerChoice == undefined){
-            getComputerChoice();
-            return computerChoice;
-            playRound();
-        }
-        else if(computerChoice && humanChoice != undefined){
             if(humanChoice === computerChoice){
                 alert("Tie!  Replay the round.");
                 playRound();
@@ -78,7 +67,7 @@
                 alert("You Lose! Paper beats Rock.")
                 computerScore++;
             }
-            else
+            else {
                 alert("You win! Paper beats Rock.")
                 humanScore++;
         }
