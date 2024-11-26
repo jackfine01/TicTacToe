@@ -42,7 +42,51 @@
     let humanScore = 0;
 
     function playRound(humanChoice, computerChoice){
+        let i = 0;
 
+        if(humanChoice === undefined){
+            getHumanChoice();
+        }
+
+        if(computerChoice === undefined){
+            getComputerChoice();
+        }
+
+        if (humanChoice && computerChoice != undefined){
+            i++;
+        }
+
+        if (i != 0){
+            if(humanChoice == computerChoice){
+                console.log("Tie!  Replay the round.");
+                playRound();
+            }
+            else if(humanChoice == "Rock" && computerChoice == "Scissors"){
+                console.log("You win! Rock beats Scissors.")
+                humanScore++;
+            }
+            else if(computerChoice == "Rock" && humanChoice == "Scissors"){
+                console.log("You lose! Rock beats Scissors.")
+                computerScore++;
+            }
+            else if(humanChoice == "Paper" && computerChoice == "Scissors"){
+                console.log("You lose! Scissors beats Paper.")
+                computerScore++;
+            }
+            else if(computerChoice == "Paper" && humanChoice == "Scissors"){
+                console.log("You win! Scissors beats Paper.")
+                humanScore++;
+            }
+            else if(computerChoice == "Paper" && humanChoice == "Rock"){
+                console.log("You Lose! Paper beats Rock.")
+                computerScore++;
+            }
+            else
+                console.log("You win! Paper beats Rock.")
+                humanScore++;
+        }
+        return humanScore;
+        return computerScore;
     };
     </script>
 </head>
