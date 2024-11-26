@@ -38,6 +38,11 @@
             return humanChoice
     };
 
+
+    function playGame(){
+
+    for(let i = 0; i < 5; i++){
+    
     let computerScore = 0;
     let humanScore = 0;
 
@@ -45,7 +50,6 @@
 
             if(humanChoice == computerChoice){
                 console.log("Tie!");
-
             }
             else if(humanChoice == "Rock" && computerChoice == "Scissors"){
                 console.log("You win! Rock beats Scissors.")
@@ -73,7 +77,6 @@
             }
             else
                 consloe.log("Invalid, play again.")
-
         console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
     };
 
@@ -81,6 +84,8 @@
     const computerSelection = getComputerChoice();
 
     playRound(humanSelection,computerSelection);
+    }
+}
     </script>
 </head>
 <body>
