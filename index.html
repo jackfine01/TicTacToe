@@ -39,12 +39,6 @@
     };
 
 
-    function playGame(){
-
-        let computerScore = 0;
-        let humanScore = 0;
-
-    for(let i = 0; i < 5; i++){
 
     function playRound(humanChoice, computerChoice){
 
@@ -84,11 +78,21 @@
     const computerSelection = getComputerChoice();
 
     playRound(humanSelection,computerSelection);
-    };
-};
+
     </script>
 </head>
 <body>
     
+    <button type="button">Rock</button>
+    <button type="button">Paper</button>
+    <button type="button">Scissors</button>
+
+    <div id="game-results">
+        "";
+    </div>
+
+    <div id="round-results">
+        "";
+    </div>
 </body>
 </html>
