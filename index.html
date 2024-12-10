@@ -75,28 +75,34 @@
         console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
     };
 
-    // const humanSelection = getHumanChoice();
+     // const humanSelection = getHumanChoice();
     // const computerSelection = getComputerChoice();
 
-
+    const container = document.querySelector('#container')
+        const rockButton = document.querySelector('#rButton');
+        const paperButton = document.querySelector('#pButton');
+        const scissorsButton = document.querySelector('#sButton');
 
     </script>
 </head>
 <body>
-    <div id="header">
+    <div class="header">
         <div id="game-results">
-            <div>Winner:</div>
+            <div class="headerTextBox">Winner:</div>
             <div id="winner"></div>
         </div>
         <div id="score">
-            <div>
+            <div class="headerTextBox">
                 Score:
             </div>
-            <div id="score">
+            <div id="scoreCard">
 
             </div>
         </div>
-        <div id="round-results">
+        <div class="round-results">
+            <div class="headerTextBox">
+                Round Results:
+            </div>
             <div id="playerResult">
 
             </div>
@@ -107,12 +113,12 @@
     </div>
 
     <div id="container">
-        <button type="button">Rock</button>
-        <button type="button">Paper</button>
-        <button type="button">Scissors</button>
+        <button id="rButton" type="button">Rock</button>
+        <button id="pButton" type="button">Paper</button>
+        <button id="sButton" type="button">Scissors</button>
     </div>
 
-    <div id="footer">
+    <div class="footer">
         <div id="fluff">
             Here is some fluff text.
         </div>
