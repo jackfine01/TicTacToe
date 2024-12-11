@@ -3,92 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script>
-
-    let computerChoice = undefined
-    function getComputerChoice(){
-        let numChoice = Math.random();
-        if (numChoice <= 0.33)
-            computerChoice = "Rock"
-        else if (numChoice >= 0.67)
-            computerChoice = "Paper"
-        else
-            computerChoice = "Scissors"
-        return computerChoice
-    };
-
-    let humanChoice = undefined
-    function getHumanChoice(){
-
-        let choice = prompt("Rock, Paper, or Scissors?");
-        if (choice.toLowerCase() === "rock") {
-            humanChoice = "Rock";
-            }
-        else if (choice.toLowerCase() === "paper"){
-            humanChoice = "Paper";
-        }
-        else if (choice.toLowerCase() === "scissors"){
-            humanChoice = "Scissors";
-        }
-        else
-            getHumanChoice();
-
-        if(humanChoice != undefined)
-            return humanChoice
-    };
-
-
-    function playGame(){
-
-        let computerScore = 0;
-        let humanScore = 0;
-
-    for(let i = 0; i < 5; i++){
-
-    function playRound(humanChoice, computerChoice){
-
-            if(humanChoice == computerChoice){
-                console.log("Tie!");
-            }
-            else if(humanChoice == "Rock" && computerChoice == "Scissors"){
-                console.log("You win! Rock beats Scissors.")
-                humanScore++;
-            }
-            else if(computerChoice == "Rock" && humanChoice == "Scissors"){
-                console.log("You lose! Rock beats Scissors.")
-                computerScore++;
-            }
-            else if(humanChoice == "Paper" && computerChoice == "Scissors"){
-                console.log("You lose! Scissors beats Paper.")
-                computerScore++;
-            }
-            else if(computerChoice == "Paper" && humanChoice == "Scissors"){
-                console.log("You win! Scissors beats Paper.")
-                humanScore++;
-            }
-            else if(computerChoice == "Paper" && humanChoice == "Rock"){
-                console.log("You Lose! Paper beats Rock.")
-                computerScore++;
-            }
-            else if(computerChoice == "Rock" && humanChoice == "Paper") {
-                console.log("You win! Paper beats Rock.")
-                humanScore++;
-            }
-            else
-                consloe.log("Invalid, play again.")
-        console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
-    };
-
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-
-    playRound(humanSelection,computerSelection);
-    };
-};
-    </script>
+    <title>rps</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js" defer></script>
 </head>
 <body>
-    
+    <div class="header">
+
+        <div id="game-results">
+            <div class="headerTextBox">Winner:</div>
+            <div id="winner"></div>
+        </div>
+
+        <div id="score">
+            <div class="headerTextBox">
+                Score:
+            </div>
+            <div id="scoreCard"></div>
+        </div>
+
+        <div class="round-results">
+
+            <div class="headerTextBox">
+                Round Results:
+            </div>
+
+            <div class = resultHolder>
+                <div id="playerResult"></div>
+                <div id="computerResult"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="container">
+        <div class="buttonHolder">
+            <button class="Button" type="button">Rock</button>
+            <button class="Button" type="button">Paper</button>
+            <button class="Button" type="button">Scissors</button>
+        </div>
+        <p id = descriptorOfResult></p> 
+    </div>
+
+    <div class="footer">
+        <div id="fluff">
+            Here is some fluff text.
+        </div>
+    </div>
 </body>
 </html>
