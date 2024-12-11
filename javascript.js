@@ -70,6 +70,9 @@ function playRound(humanChoice, computerChoice){
 // const computerSelection = getComputerChoice();
 
     const buttonHolder = document.querySelector('.buttonHolder')
-    const rockButton = buttonHolder.firstElementChild;
-    const paperButton = document.querySelector('#pButton');
-    const scissorsButton = document.querySelector('#sButton');
+    const rockButton = document.querySelectorAll(".Button")[0];
+    rockButton.onclick = () => console.log("you picked rock");
+    const paperButton = document.querySelectorAll(".Button")[1];
+    paperButton.onclick = () => console.log("you picked paper");
+    const scissorsButton = document.querySelectorAll(".Button")[2];
+    scissorsButton.onclick = () => console.log("you picked scissors");
