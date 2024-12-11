@@ -9,7 +9,6 @@ function getComputerChoice(){
         computerChoice = "Paper"
     else
         computerChoice = "Scissors"
-    console.log(computerChoice)
 };
 
 // Round logic 
@@ -23,30 +22,30 @@ function playRound(human, computer){
     computerChoice===computer;
 
         if(humanChoice == computerChoice){
-            console.log("Tie!");
+            document.getElementById("descriptorOfResult").textContent = ("Tie!");
         }
         else if(humanChoice === "Rock" && computerChoice === "Scissors"){
-            console.log("You win! Rock beats Scissors.");
+            document.getElementById("descriptorOfResult").textContent = ("You win! Rock beats Scissors.");
             humanScore++;
         }
         else if(computerChoice === "Rock" && humanChoice === "Scissors"){
-            console.log("You lose! Rock beats Scissors.");
+            document.getElementById("descriptorOfResult").textContent = ("You lose! Rock beats Scissors.");
             computerScore++;
         }
         else if(humanChoice === "Paper" && computerChoice === "Scissors"){
-            console.log("You lose! Scissors beats Paper.");
+            document.getElementById("descriptorOfResult").textContent = ("You lose! Scissors beats Paper.");
             computerScore++;
         }
         else if(computerChoice === "Paper" && humanChoice === "Scissors"){
-            console.log("You win! Scissors beats Paper.");
+            document.getElementById("descriptorOfResult").textContent = ("You win! Scissors beats Paper.");
             humanScore++;
         }
         else if(computerChoice === "Paper" && humanChoice === "Rock"){
-            console.log("You Lose! Paper beats Rock.");
+            document.getElementById("descriptorOfResult").textContent = "You Lose! Paper beats Rock.";
             computerScore++;
         }
         else if(computerChoice === "Rock" && humanChoice === "Paper") {
-            console.log("You win! Paper beats Rock.");
+            document.getElementById("descriptorOfResult").textContent = "You win! Paper beats Rock.";
             humanScore++;
         }
         else
@@ -63,7 +62,6 @@ function playRound(human, computer){
 
     function setHumanChoice(choice){
         humanChoice = choice;
-        console.log(humanChoice);
     };
 
     const buttonHolder = document.querySelector('.buttonHolder')
