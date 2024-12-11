@@ -1,3 +1,5 @@
+// Choice Logic - Computer Side
+
 let computerChoice = undefined
 function getComputerChoice(){
     let numChoice = Math.random();
@@ -10,27 +12,7 @@ function getComputerChoice(){
     return computerChoice
 };
 
-let humanChoice = undefined
-function getHumanChoice(){
-
-    let choice = prompt("Rock, Paper, or Scissors?");
-    if (choice.toLowerCase() === "rock") {
-        humanChoice = "Rock";
-        }
-    else if (choice.toLowerCase() === "paper"){
-        humanChoice = "Paper";
-    }
-    else if (choice.toLowerCase() === "scissors"){
-        humanChoice = "Scissors";
-    }
-    else
-        getHumanChoice();
-
-    if(humanChoice != undefined)
-        return humanChoice
-};
-
-
+// Round logic 
 
 function playRound(humanChoice, computerChoice){
 
@@ -66,13 +48,21 @@ function playRound(humanChoice, computerChoice){
     console.log("Your Score: " + humanScore + " Computer Score: " + computerScore)
 };
 
- // const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
+// Choice Logic - Human Side
+
+    let humanChoice = "";
+
+    function setHumanChoice(choice){
+        humanChoice = choice;
+        console.log(humanChoice);
+    };
 
     const buttonHolder = document.querySelector('.buttonHolder')
     const rockButton = document.querySelectorAll(".Button")[0];
-    rockButton.onclick = () => console.log("you picked rock");
+    rockButton.addEventListener('click', () => setHumanChoice("Rock"));
+
     const paperButton = document.querySelectorAll(".Button")[1];
-    paperButton.onclick = () => console.log("you picked paper");
+    paperButton.addEventListener('click', () => setHumanChoice("Paper"));
+
     const scissorsButton = document.querySelectorAll(".Button")[2];
-    scissorsButton.onclick = () => console.log("you picked scissors");
+    scissorsButton.addEventListener('click', () => setHumanChoice("Scissors"));
