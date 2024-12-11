@@ -69,7 +69,7 @@ function playRound(humanChoice, computerChoice){
  // const humanSelection = getHumanChoice();
 // const computerSelection = getComputerChoice();
 
-const container = rps.querySelector('.buttonHolder')
-    const rockButton = container.firstElementChild;
+    const buttonHolder = document.querySelector('.buttonHolder')
+    const rockButton = buttonHolder.firstElementChild;
     const paperButton = document.querySelector('#pButton');
     const scissorsButton = document.querySelector('#sButton');
