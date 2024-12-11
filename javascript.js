@@ -13,6 +13,8 @@ function getComputerChoice(){
 };
 
 // Round logic 
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
 
@@ -66,3 +68,7 @@ function playRound(humanChoice, computerChoice){
 
     const scissorsButton = document.querySelectorAll(".Button")[2];
     scissorsButton.addEventListener('click', () => setHumanChoice("Scissors"));
+
+// Header Display
+
+document.getElementById("scoreCard").textContent = humanScore + " : " + computerScore;
